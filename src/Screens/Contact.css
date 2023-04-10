@@ -1,0 +1,28 @@
+.con{
+    height: 100vh;
+}
+
+.img{
+    background-image: url("../images/josh-gordon-fzHmP6z8OQ4-unsplash.jpg");
+}
+
+    .background {
+        background-image: url('https://source.unsplash.com/random/?people+running');
+        background-size: cover;
+        background-position: center;
+        width: 50vw;
+        height: 100vh;
+      }
+.box{
+    justify-content: center;
+    position: relative;
+    top: 10vh;
+    left: 5vw;
+   
+}
+      .card{
+    width: 40vw;
+    height: 75vh;
+    overflow:auto;
+    background: #a6f0f3;
+}

@@ -1,0 +1,27 @@
+.App{
+    background: url("https://source.unsplash.com/random/?people+running");    
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+.auth-form-container{
+    width: 30vw;
+    height: fit-content;
+    position: relative;
+    padding: 3vw;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10%;
+    left: 35vw;
+    top: 25vh
+    ;}
+    .data{
+        margin: 3vw;
+        padding: 3vw;
+        width: 10 vw;
+        height: 8 vw;
+        border-radius: 10%;
+        background: #ffffff;
+        opacity: 70%;
+    }
