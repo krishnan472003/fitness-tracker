@@ -5,7 +5,7 @@ import Top from '../components/Navbar';
 import { Form, Button, Card } from 'react-bootstrap';
 import dataService from '../services/data.services';
 import { useNavigate } from 'react-router-dom';
-
+import Footer from '../components/Footer'
 export default function FormData() {
   const navigate = useNavigate();
   const [data, setData] = useState({
@@ -32,15 +32,13 @@ export default function FormData() {
     <>
       <Top style={{ position: 'fixed', top: 0 }} />
       <div className="row">
+        <div className="col-md-6 background"></div>
         <div className="col-md-6">
-          <div className="background"></div>
-        </div>
-        <div className="col-md-6 box">
-          <div className="card">
-            <Card>
+          <div className="card" >
+            <div className='card-body'style={{"backgroundColor":"#84def5"}}>
               <h1>Enter Data</h1>
               <Form>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="" controlId="formBasicEmail">
                   <Form.Label>height</Form.Label>
                   <Form.Control
                     type="number"
@@ -89,10 +87,11 @@ export default function FormData() {
                   Submit
                 </Button>
               </Form>
-            </Card>
+            </div>
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

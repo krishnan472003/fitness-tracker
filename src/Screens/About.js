@@ -1,14 +1,13 @@
 import React from 'react'
 import "./Contact.css"
 import Top from "../components/Navbar"
+import Footer from "../components/Footer"
 export default function About() {
   return (
     <>
     <Top/>
     <div className='row'>
-      
-      <div className='col-md-6'><div class="background"></div>
-</div>
+      <div className='col-md-6 background'></div>
       <div className='col-md-6'>
         <div className="h1 d-flex justify-content-sm-center m-5">About Us</div>
         <div className=" d-flex justify-content-sm-center" style={{width: "30 vw"}}>
@@ -20,6 +19,7 @@ Mauris pretium nibh justo, faucibus pulvinar dui facilisis sed. Sed sed mollis p
 </div>
       </div>
     </div>
+    <Footer/>
     </>
     
   )

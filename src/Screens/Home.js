@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Top from '../components/Navbar';
 import Card from "../components/dataCard";
 import dataServices from '../services/data.services';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-
+import Footer from '../components/Footer';
+import "./Home.css"
 export default function Home() {
-  let loadData
   const [arr, setArr] = useState([]);
   useEffect(() => {
       dataServices.getData().then(data=>setArr(data))
@@ -25,19 +23,21 @@ export default function Home() {
         <Top />
         {/* <button className='bt'><Link to ="/data">Add</Link></button> */}
       </div>
+      
       {arr !== null ? (
   <div className="container-fluid ">
+    <div className='container-fluid Card-Center'><h1>Cards:</h1></div>
     <div className="row">
       {arr.map((item, index) => (
         <div className="col-md-6">
-          <Card date = {item.date} weight = {item.weight} height = {item.height} fatPercent = {item.fatPercent} muscleMass = {item.muscleMass} waterPercent = {item.waterPercent}/>
+          <Card style ={{"justify-content":"center"}} date = {item.date} weight = {item.weight} height = {item.height} fatPercent = {item.fatPercent} muscleMass = {item.muscleMass} waterPercent = {item.waterPercent}/>
         </div>
       ))}
     </div>
   </div>
 ) : (
-  <div>Please Signup or add data</div>
+  <div className='container-fluid Card-Center'><h1>Cards:</h1></div>
 )}
-    </>
+    <Footer/></>
   );
 }

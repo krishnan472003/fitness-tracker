@@ -5,6 +5,7 @@ import { useState } from 'react';
 import contactServices from '../services/contact.services';
 import Top from '../components/Navbar';
 import "./Contact.css"
+import Footer from '../components/Footer';
 function Contact() {
   const [email,setEmail] = useState("");
   const [name,setName] = useState("");
@@ -18,10 +19,14 @@ function Contact() {
   <Top/>
   <div className='row'>
       
-      <div className='col-md-6'><div class="background"></div>
-</div>
+      <div className='col-md-6 background'></div>
       <div className='col-md-6'>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} className='m-3 p-3'>
+      <Form.Group controlId="formBasicEmail">
+        <Form.Text className="h1 mx-auto">
+          CONTACT US
+        </Form.Text>
+      </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control value={email} type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} />
@@ -35,7 +40,7 @@ function Contact() {
       </Form.Group>
       <Form.Group className="mb-3" >
       <Form.Label>Message</Form.Label>
-        <Form.Control value={text} type="text" placeholder="Enter Text" onChange={(e) => setText(e.target.value)}/>
+        <Form.Control style={{"height":"100px"}} value={text} type="text" placeholder="Enter Text" onChange={(e) => setText(e.target.value)}/>
       </Form.Group>
 
       <Button variant="primary" type="submit">
@@ -44,6 +49,7 @@ function Contact() {
     </Form>
       </div>
     </div>
+<Footer/>
   </>
 
     

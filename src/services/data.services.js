@@ -13,8 +13,8 @@ class dataService{
         console.log('No matching documents.');
         return null;
       } else {
-        const allData = querySnapshot.docs.map(doc => doc.data());
-        console.log('All data:', allData);
+        let allData=[];
+        allData = querySnapshot.docs.map(doc => doc.data());
         return allData;
       }
     }
