@@ -13,7 +13,6 @@ function Contact() {
 
   const handleSubmit =()=>{
     contactServices.addData({email,name,text});
-    alert("message sent")
   }
   return (<>
   <Top/>

@@ -21,7 +21,7 @@ function Top() {
       .then(() => {
         localStorage.removeItem('uid');
         setUser(null);
-        navigate('/');
+        navigate('/login');
       })
       .catch((error) => {
         console.log(error);
